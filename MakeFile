@@ -1,0 +1,6 @@
+Project: master.o user.o
+	cc -Wall master.o user.o -o project
+master.o: master.c errno.h fcntl.h stdlib.h string.h ctype.h unistd.h phonebook.h
+	cc -Wall -c master.c
+user.o: phonebook.h
+	cc -Wall -c user.c
